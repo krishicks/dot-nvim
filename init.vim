@@ -34,10 +34,6 @@ endif
 " ignore binary files
 set wildignore+=*.a
 
-" colors
-colorscheme ir_black
-let g:jellybeans_use_lowcolor_black = 0
-
 " escape with smashing j and k; easier to press quickly on slow systems
 imap jk <esc>
 imap kj <esc>
@@ -76,14 +72,6 @@ function! SyntaxItem()
 endfunction
 
 " set statusline=%{SyntaxItem()}
-
-" autocomplete config
-set completeopt+=noselect " deoplete.nvim recommend
-set completeopt-=preview
-set cmdheight=2
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 " tab for cycling through options
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
