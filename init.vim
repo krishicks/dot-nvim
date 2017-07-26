@@ -3,9 +3,6 @@ execute pathogen#infect()
 " enable mouse in all modes
 set mouse=a
 
-" use comma as leader key
-let mapleader=","
-
 " reveal neighbor text when nearing screen borders
 set scrolloff=1
 set sidescrolloff=5
@@ -34,28 +31,11 @@ endif
 " ignore binary files
 set wildignore+=*.a
 
-" escape with smashing j and k; easier to press quickly on slow systems
-imap jk <esc>
-imap kj <esc>
-
-" save on enter
-nmap <cr> :w<cr>
-
 " clear highlights on space
 nmap <space> :noh<cr>
 
-" shorthand for window switching
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
 " work around sketchy <C-h> behavior; hopefully this can be removed someday
 nmap <BS> <C-w>h
-
-" sensible long line navigation
-nmap j gj
-nmap k gk
 
 " nerdtree bindings
 nnoremap \ :NERDTreeToggle<CR>
