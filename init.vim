@@ -37,10 +37,6 @@ nmap <space> :noh<cr>
 " work around sketchy <C-h> behavior; hopefully this can be removed someday
 nmap <BS> <C-w>h
 
-" nerdtree bindings
-nnoremap \ :NERDTreeToggle<CR>
-nnoremap \| :NERDTreeFind<CR>
-
 " undotree bindings
 nnoremap <leader>u :UndotreeToggle<CR>
 
