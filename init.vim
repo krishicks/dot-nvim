@@ -15,6 +15,10 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Split below and to the right
+set splitbelow
+set splitright
+
 " enable line number gutter
 set number
 
@@ -83,6 +87,9 @@ let g:qf_loclist_window_bottom = 0
 
 " load language-specific configuration
 runtime! lang/*.vim
+
+hi Search cterm=NONE ctermfg=grey ctermbg=blue
+set hlsearch
 
 " source local config if any
 if !empty(glob("~/.nvimrc.local"))
