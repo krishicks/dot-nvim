@@ -67,16 +67,9 @@ endfunction
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
 
-" use ag instead of ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --smart-case'
-  cnoreabbrev Ag Ack
+if executable('rg')
+  set grepprg=rg\ --vimgrep
 endif
-
-" ensure vertical splits don't split into NERDTree
-let g:ack_mappings = {
-      \  'v':  '<C-W><CR><C-W>L<C-W>p<C-W>J<C-W>p',
-      \ 'gv': '<C-W><CR><C-W>L<C-W>p<C-W>J' }
 
 " enable Ack-style bindings in quickfix/loclist windows
 " (e.g. s = open in split, v = open in vsplit, etc.)
@@ -98,3 +91,6 @@ end
 
 " don't auto-fold
 set foldlevelstart=99
+
+" fzf
+nmap <silent> <Ctrl>p :Files<cr>
