@@ -81,8 +81,11 @@ let g:qf_loclist_window_bottom = 0
 " load language-specific configuration
 runtime! lang/*.vim
 
-hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi Search cterm=NONE ctermfg=white ctermbg=blue
 set hlsearch
+
+" fzf
+nmap <silent> <C-p> :Files<cr>
 
 " source local config if any
 if !empty(glob("~/.nvimrc.local"))
@@ -92,5 +95,7 @@ end
 " don't auto-fold
 set foldlevelstart=99
 
-" fzf
-nmap <silent> <Ctrl>p :Files<cr>
+let g:neomake_go_gometalinter_args = [ '--disable-all', '--enable=staticcheck', '--enable=gosimple', '--enable=vet', '--enable=gofmt', '--enable=golint' ]
+
+set nofixendofline
+set noendofline
