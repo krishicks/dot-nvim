@@ -99,3 +99,6 @@ let g:neomake_go_gometalinter_args = [ '--disable-all', '--enable=staticcheck', 
 
 set nofixendofline
 set noendofline
+
+" remove trailing spaces
+" autocmd BufWritePre * %s/\s\+$//e
