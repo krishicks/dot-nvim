@@ -102,3 +102,6 @@ set noendofline
 
 " remove trailing spaces
 " autocmd BufWritePre * %s/\s\+$//e
+
+" fzf = Ctrl-P
+nmap <silent> <C-p> :Files<cr>
